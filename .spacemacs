@@ -33,7 +33,6 @@ This function should only modify configuration layer settings."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(python
-     mu4e
      themes-megapack
      html
      ;; ----------------------------------------------------------------
@@ -526,6 +525,12 @@ See the header of this file for more information."
   (spacemacs/load-spacemacs-env))
 
 (defun dotspacemacs/user-init ()
+(setq url-proxy-services
+   '(("no_proxy" . "^\\(localhost\\|10\\..*\\|192\\.168\\..*\\)")
+     ("http" . "127.0.0.1:9000")
+     ("https" . "127.0.0.1:9000")))
+
+
   "Initialization for user code:
 This function is called immediately after `dotspacemacs/init', before layer
 configuration.
@@ -573,5 +578,5 @@ This function is called at the very end of Spacemacs initialization."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :extend nil :stipple nil :background "#102235" :foreground "#DFEFF6" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 180 :width normal :foundry "nil" :family "Menlo")))))
+ '(default ((t (:inherit nil :extend nil :stipple nil :background "#102235" :foreground "#DFEFF6" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 160 :width normal :foundry "outline" :family "Source Code Pro")))))
 )
