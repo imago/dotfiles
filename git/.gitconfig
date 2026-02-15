@@ -1,0 +1,6 @@
+[http]
+#	proxy = http://localhost:9000
+[user]
+	name = Ilkay Sakalli
+	email = i.sakalli@gmail.com
+

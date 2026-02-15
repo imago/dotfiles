@@ -1,6 +1,0 @@
-[http]
-	proxy = http://localhost:9000
-[user]
-	name = imago
-	email = i.sakalli@gmail.com
-	
