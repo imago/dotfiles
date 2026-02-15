@@ -10,7 +10,10 @@ config.window_decorations = "RESIZE"
 config.window_background_opacity = 0.8
 config.macos_window_background_blur = 10
 
--- config.color_scheme = "Batman"
+-- full screen mode with control + command + f within macos
+config.keys = {
+  { key = 'f', mods = 'CTRL|CMD', action = wezterm.action.ToggleFullScreen },
+}
 
 -- my coolnight colorscheme:
 config.colors = {
