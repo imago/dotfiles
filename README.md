@@ -50,6 +50,24 @@ Die Ordnerstruktur spiegelt den Zielpfad relativ zu ~ wider:
 | Testlauf (dry-run) | stow -n -v <name> |
 
 
+## Skills
+
+Der Ordner `skills/` enthält Skill-Instruktionsdateien (`SKILL.md`) für den persönlichen Einsatz in Projekten.
+
+| Datei / Ordner                        | Zweck                                                        |
+| ------------------------------------- | ------------------------------------------------------------ |
+| `.github/skills/todo/SKILL.md`        | Aufgabenverwaltung nach der Eisenhower-Methode (`~/todo.md`) |
+
+### Skills in ein Projekt einbinden
+
+```bash
+cd ~/.dotfiles
+stow --target ~/workspace/my-project skills
+```
+
+Damit werden die `SKILL.md`-Dateien per Symlink in das Zielverzeichnis eingebunden und stehen dem Copilot-Agenten im jeweiligen Projekt zur Verfügung:
+
+- `~/workspace/my-project/.github/skills/todo/SKILL.md` → Todo-Skill
 
 ## ⚠️ Fehlerbehebung
 Wenn Zieldateien bereits existieren (z. B. ~/.zshrc), verschiebe oder lösche sie und führe Stow erneut aus:
